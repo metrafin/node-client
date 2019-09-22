@@ -1,0 +1,27 @@
+{
+  "name": "metrafin",
+  "version": "1.0.0",
+  "description": "Official Metrafin API Client for Node.js",
+  "main": "src/Application.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metrafin/node-client.git"
+  },
+  "keywords": [
+    "metrafin",
+    "api",
+    "api-client"
+  ],
+  "author": "Metrafin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metrafin/node-client/issues"
+  },
+  "homepage": "https://github.com/metrafin/node-client",
+  "dependencies": {
+    "centra": "^2.4.0"
+  }
+}
