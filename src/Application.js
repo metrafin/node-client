@@ -21,7 +21,21 @@ class Application {
 		}
 	}
 
-	async getAuth (accessToken) {
+	async auth (code, method = 'authorizationCode') {
+		let accessToken
+
+		if (method === 'authorizationCode') {
+			const authTokenRes = await this.getReq('private', null, 'POST').path('createAccessToken').body({
+				'authorizationCode': code
+			}).send()
+
+			accessToken = (await utilities.parse(authTokenRes)).accessToken
+		}
+		else if (method === 'accessToken') {
+			accessToken = code
+		}
+		else throw new Error('Unknown auth method \'' + method + '\'')
+
 		const authInfo = await this.getReq('access', accessToken).path('token').send()
 
 		const parsed = await utilities.parse(authInfo)
