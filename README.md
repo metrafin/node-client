@@ -29,12 +29,12 @@ const myApp = new App('VLeIjSNigss5eqLcNf5Snv2kh_d-HWOv1-ojr952gpW0CyKt')
 // in async context
 
 const userInfoA = await myApp.resolveUser('username', 'ethan')
-// => { error: null, userId: 'd2ed3320-af45-4136-bc51-bb48a62da7dc', username: 'ethan' }
+// => { error: null, userId: '9175009b-b215-4be8-a3a8-88322757804d', username: 'ethan' }
 
 // or...
 
 const userInfoB = await myApp.resolveUser('userId', '9175009b-b215-4be8-a3a8-88322757804d')
-// => { error: null, userId: 'd2ed3320-af45-4136-bc51-bb48a62da7dc', username: 'ethan' }
+// => { error: null, userId: '9175009b-b215-4be8-a3a8-88322757804d', username: 'ethan' }
 ```
 
 ## Create authorization instance using authorization code (`authorization_code`)
